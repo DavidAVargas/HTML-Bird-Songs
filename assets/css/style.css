@@ -1,43 +1,36 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
 nav {
-    width: 100%;
-    background: linear-gradient(to bottom right, beige, skyblue);
-    text-align: center;
+  width: 100%;
+  background: linear-gradient(to bottom right, beige, skyblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
+  list-style-type: none;
+  padding: 0.625em;
 }
-
-nav li {
-    display: inline;
-    margin-right: 15px;
+nav ul li {
+  display: inline;
+  margin-right: 0.9375em;
 }
-
-nav a {
-    font-size: 30px;
-    text-decoration: none;
+nav ul li a {
+  font-size: 1.875em;
+  color: blue;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
-
-nav a:visited {
-    color: blue;
+nav ul li a:visited {
+  color: blue;
 }
-
-nav a:hover {
-    color: hotpink;
+nav ul li a:hover {
+  color: hotpink;
 }
-
-.current-page {
-    background-color: white;
+nav .current-page {
+  background-color: white;
 }
 
 main {
-    margin: 0 10%;
+  margin: 0 10%;
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+// partials.scss
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+
+nav {
+  width: 100%;
+  @include background-gradient($secondary-color, $primary-color);
+  @include flex-center;
+
+  ul {
+    list-style-type: none;
+    padding: em(10);
+
+    li {
+      display: inline;
+      margin-right: em(15);
+      
+      a {
+        font-size: em($nav-font-size);
+        color: $link-color;
+        text-decoration: none;
+        @include transition(color);
+
+        &:visited {
+          color: $link-color;
+        }
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+
+  .current-page {
+    background-color: white;
+  }
+}
+
+main {
+  margin: 0 $main-margin;
+}

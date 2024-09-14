@@ -1,0 +1,14 @@
+// mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin transition($property) {
+    transition: $property 0.3s ease-in-out;
+  }
+  
+  @mixin background-gradient($color1, $color2) {
+    background: linear-gradient(to bottom right, $color1, $color2);
+  }

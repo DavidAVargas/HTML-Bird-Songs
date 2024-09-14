@@ -1,0 +1,18 @@
+@use "sass:math";
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@function em($pixels, $base-font-size: 16px) {
+  @if (unit($pixels) == 'px') {
+    $pixels: strip-unit($pixels);
+  } @else if (unit($pixels) != '') {
+    @error "The em() function expects either a unitless number or a pixel value.";
+  }
+  @return math.div($pixels, strip-unit($base-font-size)) * 1em;
+}
+
+@function darken-color($color, $amount: 10%) {
+  @return darken($color, $amount);
+}
